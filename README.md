@@ -56,6 +56,7 @@ The Random Forest model, consisting of 100 decision trees and employing the entr
 | support| 76 | 183 | 532 | 138 | 525 |
 
 3. **Support Vector Machine (SVM):**
+
 3.1 **SVM with Linear Kernel**
 The SVM with a Linear Kernel, despite not undergoing feature scaling, demonstrated competitive accuracy at 69.12%. Feature scaling techniques, such as MinMax Scaling and Standard Scaler, were explored to assess their impact on model performance.
 
@@ -65,6 +66,7 @@ Cross Validation  67.42%
 MinMax Scaling	 69.11%
 Standard Scaler	79.09%
 
+3.2 **SVM with Multiple Kernel**
 SVM with RBF Kernel (Best Performing Model)
 The SVM with RBF Kernel emerged as the best-performing model with an accuracy of 83.6%. Optimal hyperparameters, obtained through grid search, further enhanced its classification performance.
 

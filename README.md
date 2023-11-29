@@ -35,23 +35,82 @@ The dataset encompassed five distinct phases: 'Rest,' 'Preparation,' 'Stroke,' '
 In this study, we conducted a thorough feature engineering process to enhance the dataset's informativeness for the classification of gesture phase segmentation. Our approach involved computing Euclidean distances between various pairs of body parts, thereby capturing the spatial relationships within the skeletal structure. This enabled us to quantify the relative positioning of limbs and joints, providing valuable insights into gestural dynamics. To incorporate temporal aspects, we calculated velocity and acceleration for each coordinate of body parts, ensuring uniformity and comparability across different dimensions through robust scaling. The robust nature of the RobustScaler, which is less sensitive to outliers, proved advantageous in handling the complex and dynamic nature of our dataset. The resultant dataset was enriched with features encapsulating both spatial intricacies and the dynamic nature of gestures, forming a solid foundation for subsequent machine-learning tasks. Furthermore, our evaluation of feature scaling techniques highlighted the superior performance of RobustScaler over MinMaxScaler, particularly in the presence of outliers that are common in dynamic datasets. The comprehensive analysis and feature engineering undertaken in this work contribute to the understanding of gestural dynamics and lay the groundwork for robust machine learning models in the domain of gesture phase segmentation. The processed dataset, along with the enriched features, is made publicly available for further research and exploration.
 
 ## IV. Machine Learning Model
-Decision Tree
+1. **Decision Tree:**
 The Decision Tree classifier, with parameters set at min_samples_split=20, random_state=99, and criterion='entropy', achieved an accuracy of 80.12%. While displaying effectiveness in certain phases, challenges were identified in others, as evident in the Confusion Matrix. The decision tree's hierarchical structure and extracted textual rules enhanced interpretability.
 
-Random Forest
+|           | Hold |Preparation  |  Rest | Retraction | Stroke |
+|-----------|---------|---------|---------|---------|---------|
+| precision | 0.72 | 0.53 | 0.90 | 0.61 | 0.87 |
+| recall  | 0.75 | 0.56 | 0.92 | 0.66 | 0.81 |
+| f1-score| 0.74 | 0.55 | 0.91 | 0.63 | 0.84 |
+| support| 76 | 183 | 532 | 138 | 525 |
+
+2. **Random Forest:**
 The Random Forest model, consisting of 100 decision trees and employing the entropy criterion, demonstrated impressive performance with an accuracy of 91.20%. Precision and recall values were consistently high, as illustrated in the Classification Report. Feature importances were visualized to provide insights into the model's decision-making process.
 
-Support Vector Machine (SVM)
-SVM with Linear Kernel
+|           | Hold |Preparation  |  Rest | Retraction | Stroke |
+|-----------|---------|---------|---------|---------|---------|
+| precision | 0.92 | 0.91 | 0.93 | 0.96 | 0.89 |
+| recall  | 0.86 | 0.67 | 0.99 | 0.73 | 0.98 |
+| f1-score| 0.88 | 0.77 | 0.96 | 0.83 | 0.93 |
+| support| 76 | 183 | 532 | 138 | 525 |
+
+3. **Support Vector Machine (SVM):**
+3.1 **SVM with Linear Kernel**
 The SVM with a Linear Kernel, despite not undergoing feature scaling, demonstrated competitive accuracy at 69.12%. Feature scaling techniques, such as MinMax Scaling and Standard Scaler, were explored to assess their impact on model performance.
 
 Scaling Technique	Accuracy
 None	69.12%
-MinMax Scaling	...
-Standard Scaler	...
+Cross Validation  67.42%
+MinMax Scaling	 69.11%
+Standard Scaler	79.09%
 
 SVM with RBF Kernel (Best Performing Model)
 The SVM with RBF Kernel emerged as the best-performing model with an accuracy of 83.6%. Optimal hyperparameters, obtained through grid search, further enhanced its classification performance.
+
 ## V. Conclusion 
+In summary, the SVM with RBF Kernel stands out as the most balanced and robust model for the given dataset. Its accuracy of 83.6% and detailed Classification Report, including precision, recall, and F1-score for each class, showcase its comprehensive performance across all gesture phases. This model excels in both accuracy and generalization, making it a strong candidate for applications where a well-rounded performance is crucial.
+
+The Random Forest model, with its remarkable accuracy of 91.20%, also presents itself as a powerful classifier. Its Classification Report highlights outstanding precision and recall in phases 2 and 4, showcasing its proficiency in recognizing these specific gestures. While some misclassifications occur in phases 1 and 3, the overall macro and weighted F1-scores of 87% and 91%, respectively, underscore its strong performance and reliability.
+
+The Decision Tree model, although achieving an accuracy of 80.12%, exhibits some limitations in precision and recall, particularly in phases 1 and 3. Despite these challenges, the model remains a solid choice, especially in scenarios where interpretability and simplicity take precedence.
+
+Ultimately, the choice among these models depends on the specific requirements of the application. If a balance of accuracy and interpretability is essential, the SVM with RBF Kernel is recommended. For scenarios where high accuracy is paramount, the Random Forest model proves to be a formidable choice. The Decision Tree model, while slightly less accurate, remains valuable for its interpretability and simplicity, making it suitable for certain applications.
 
 ## VI. How to Use
+1. **Clone the Repository:**
+   - Open a terminal or command prompt.
+   - Run the following command to clone the repository to your local machine:
+     ```bash
+     git clone https://github.com/srdjop/PM2.5-Chengdu-Analysis.git
+     ```
+ 
+2. **Navigate to the Project Directory:**
+   - Change into the project directory:
+     ```bash
+     cd PM2.5-Chengdu-Analysis
+     ```
+
+3. **Install Dependencies:**
+   - Ensure you have Python installed on your machine.
+   - Install the required dependencies by running:
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+4. **Open Jupyter Notebook:**
+   - Start Jupyter Notebook by running:
+     ```bash
+     jupyter notebook
+     ```
+   - This will open a new tab in your web browser showing the Jupyter file explorer.
+
+5. **Explore the Analysis:**
+   - In the Jupyter file explorer, locate and open the `PM2.5_Chengdu_Analysis.ipynb` notebook.
+
+6. **Run the Notebook:**
+   - Inside the notebook, you can run each cell by clicking on it and pressing `Shift + Enter`.
+   - Explore the code, visualizations, and results provided in the notebook.
+
+7. **Contribute:**
+   - Feel free to contribute by raising issues, submitting pull requests, or improving the analysis.

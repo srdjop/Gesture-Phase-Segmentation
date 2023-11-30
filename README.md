@@ -12,7 +12,7 @@ Welcome to the Gesture Phase Segmentation project! This guide will assist you in
 6. [How to Use](#vii-how-to-use)
 
 ## I. Introduction
-Welcome to this notebook on Gesture Phase Segmentation! In this project, we will be working with the Gesture Phase Segmentation dataset from the UCI Machine Learning Repository. The dataset is designed for the task of segmenting hand gesture signals into different phases, providing a valuable resource for understanding and classifying temporal aspects of hand movements. We use a1_raw.csv, a2_raw.csv and a3_raw.csv datasets.
+Welcome to this notebook on Gesture Phase Segmentation! In this project, we will be working with the Gesture Phase Segmentation dataset from the UCI Machine Learning Repository. The dataset is designed for the task of segmenting hand and body gesture signals into different phases, providing a valuable resource for understanding and classifying temporal aspects of hand and body movements. We use a1_raw.csv, a2_raw.csv and a3_raw.csv datasets.
 
 Our approach to solving the problem involves the following steps:
    1. Data Exploration: Gain insights into the structure of the dataset and the distribution of gesture phases.

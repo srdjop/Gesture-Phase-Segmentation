@@ -73,7 +73,7 @@ The SVM with RBF Kernel emerged as the best-performing model with an accuracy of
 ## V. Conclusion 
 In summary, the SVM with RBF Kernel stands out as the most balanced and robust model for the given dataset. Its accuracy of 83.6% and detailed Classification Report, including precision, recall, and F1-score for each class, showcase its comprehensive performance across all gesture phases. This model excels in both accuracy and generalization, making it a strong candidate for applications where a well-rounded performance is crucial.
 
-The Random Forest model, with its remarkable accuracy of 91.20%, also presents itself as a powerful classifier. Its Classification Report highlights outstanding precision and recall in phases 2 and 4, showcasing its proficiency in recognizing these specific gestures. While some misclassifications occur in phases 1 and 3, the overall macro and weighted F1-scores of 87% and 91%, respectively, underscore its strong performance and reliability.
+The Random Forest model, with its remarkable accuracy of 91.20%, also presents itself as a powerful classifier. Its Classification Report highlights outstanding precision and recall in phases 2 and 4, showcasing its proficiency in recognizing these specific gestures. While some misclassifications occur in phases 1 and 3, the overall macro and weighted F1 scores of 87% and 91%, respectively, underscore its strong performance and reliability.
 
 The Decision Tree model, although achieving an accuracy of 80.12%, exhibits some limitations in precision and recall, particularly in phases 1 and 3. Despite these challenges, the model remains a solid choice, especially in scenarios where interpretability and simplicity take precedence.
 

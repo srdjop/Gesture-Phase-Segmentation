@@ -1,5 +1,5 @@
 # Gesture-Phase-Segmentation
-Introduction
+
 Welcome to the Gesture Phase Segmentation project! This guide will assist you in navigating through the project repository and utilizing the analysis and models developed. If you are interested in segmenting gesture signals into different phases, you're in the right place.
 
 ## Table of Contents

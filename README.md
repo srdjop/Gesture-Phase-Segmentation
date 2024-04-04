@@ -1,5 +1,5 @@
 # Gesture-Phase-Segmentation
-Introduction
+
 Welcome to the Gesture Phase Segmentation project! This guide will assist you in navigating through the project repository and utilizing the analysis and models developed. If you are interested in segmenting gesture signals into different phases, you're in the right place.
 
 ## Table of Contents
@@ -9,7 +9,6 @@ Welcome to the Gesture Phase Segmentation project! This guide will assist you in
 3. [Feature Engineering](#iv-feature-engineering)
 4. [Machine Learning Model](#v-machine-learning-model)
 5. [Conclusion](#vi-conclusion)
-6. [How to Use](#vii-how-to-use)
 
 ## I. Introduction
 Welcome to this notebook on Gesture Phase Segmentation! In this project, we will be working with the Gesture Phase Segmentation dataset from the UCI Machine Learning Repository. The dataset is designed for the task of segmenting hand and body gesture signals into different phases, providing a valuable resource for understanding and classifying temporal aspects of hand and body movements. We use a1_raw.csv, a2_raw.csv and a3_raw.csv datasets.
@@ -78,41 +77,3 @@ The Random Forest model, with its remarkable accuracy of 91.20%, also presents i
 The Decision Tree model, although achieving an accuracy of 80.12%, exhibits some limitations in precision and recall, particularly in phases 1 and 3. Despite these challenges, the model remains a solid choice, especially in scenarios where interpretability and simplicity take precedence.
 
 Ultimately, the choice among these models depends on the specific requirements of the application. If a balance of accuracy and interpretability is essential, the SVM with RBF Kernel is recommended. For scenarios where high accuracy is paramount, the Random Forest model proves to be a formidable choice. The Decision Tree model, while slightly less accurate, remains valuable for its interpretability and simplicity, making it suitable for certain applications.
-
-## VI. How to Use
-1. **Clone the Repository:**
-   - Open a terminal or command prompt.
-   - Run the following command to clone the repository to your local machine:
-     ```bash
-     git clone https://github.com/srdjop/PM2.5-Chengdu-Analysis.git
-     ```
- 
-2. **Navigate to the Project Directory:**
-   - Change into the project directory:
-     ```bash
-     cd PM2.5-Chengdu-Analysis
-     ```
-
-3. **Install Dependencies:**
-   - Ensure you have Python installed on your machine.
-   - Install the required dependencies by running:
-     ```bash
-     pip install -r requirements.txt
-     ```
-
-4. **Open Jupyter Notebook:**
-   - Start Jupyter Notebook by running:
-     ```bash
-     jupyter notebook
-     ```
-   - This will open a new tab in your web browser showing the Jupyter file explorer.
-
-5. **Explore the Analysis:**
-   - In the Jupyter file explorer, locate and open the `PM2.5_Chengdu_Analysis.ipynb` notebook.
-
-6. **Run the Notebook:**
-   - Inside the notebook, you can run each cell by clicking on it and pressing `Shift + Enter`.
-   - Explore the code, visualizations, and results provided in the notebook.
-
-7. **Contribute:**
-   - Feel free to contribute by raising issues, submitting pull requests, or improving the analysis.
